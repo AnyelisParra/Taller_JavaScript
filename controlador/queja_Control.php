@@ -16,9 +16,9 @@ class queja_Control {
 
 
         $queja->setqueja($arr["queja"]);
-        echo $arr["queja"];
+      
         $queja->setid_ciudad($arr["lista2"]);	
-        echo $arr["lista2"];
+       
        
       
         return $quejaMo->addQueja($queja);

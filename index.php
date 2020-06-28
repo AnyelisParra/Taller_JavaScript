@@ -19,8 +19,8 @@
 </head>
 <body>
 <?php
-// Desactivar toda notificación de error
-/* error_reporting(0); */
+// // Desactivar toda notificación de error
+     error_reporting(0); 
     //require_once("vista/inicio.php");
     session_start();
     if(!isset($_SESSION['Reg']))
