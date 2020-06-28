@@ -5,6 +5,7 @@ class Queja{
  private $id_ciudad;
  private $id_queja;
 
+
    function __construct() {
         
    }

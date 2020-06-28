@@ -15,12 +15,17 @@ class queja_Control {
         $quejaMo=new quejaModelo();
 
 
-        $queja->setqueja($arr["queja"]);		
-        $queja->setid_ciudad($arr["id_ciudad"]);		
-        $queja->setid_queja($arr["id_queja"]);	
+        $queja->setqueja($arr["queja"]);
+        echo $arr["queja"];
+        $queja->setid_ciudad($arr["lista2"]);	
+        echo $arr["lista2"];
+       
       
         return $quejaMo->addQueja($queja);
     }
 
+    
+
+   
   
 }

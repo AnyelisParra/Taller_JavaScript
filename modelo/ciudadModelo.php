@@ -26,16 +26,28 @@ class ciudadModelo{
               return false;
         }
     }
-    public function listar($lin){
+    public function listar(){
 		$sql = "SELECT * FROM departamento;";
-		$result = $lin->query($sql);	
+		$result = $this->db->query($sql);	
 		$arr=array();
-		while ($fila = $result->fetch_assoc()){
+		while ($fila = $result->fetch(PDO::FETCH_ASSOC)){
 			$arr[]=$fila;
 		}
 		return($arr);
 	}
 
+    public function listarCiudades($id_departamento){
+        $sql = "SELECT * FROM ciudad WHERE id_departamento=$id_departamento";
+		$result = $this->db->query($sql);	
+		$arr=array();
+		while ($fila = $result->fetch(PDO::FETCH_ASSOC)){
+			$arr[]=$fila;
+		}
+		return($arr);
+
+
+
+    }
 
 
 

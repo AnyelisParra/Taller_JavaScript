@@ -13,14 +13,19 @@ class quejaModelo{
     
 
     public function addQueja ($queja){
-        $queja=$queja->getqueja();
-        /* $nombre_departamento=$departamento->getnombre_departamento();
-        $id_departamento=$departamento->getid_departamento(); */
+        $queja1 = $queja->getqueja();
+        $id_ciudad = $queja->getid_ciudad();
+        // $id_queja=$queja->getid_queja();
+        // $id_departamento=$ciudad->getid_departamento();
         
-      if($this->db->query("INSERT INTO queja(queja,nombre_departamento, id_departamento)VALUES('$queja','$nombre_departamento','$id_departamento')")){
+      
+        
+      if($this->db->query("INSERT INTO queja(queja,id_ciudad)VALUES('$queja1','$id_ciudad')")){
          return true;
      } else{
         return false;
       }
     }
+
+    
 } 

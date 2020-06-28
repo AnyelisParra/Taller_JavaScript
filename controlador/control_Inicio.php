@@ -7,9 +7,11 @@ class control_Inicio{
             require_once("vista/departamento_Vista.php");
         }
         if(isset($arr['btn_crearCiudad'])){
+            require_once("controlador/ciudad_Control.php");
             require_once("vista/ciudad_Vista.php");
         }
         if(isset($arr['btn_queja'])){
+            require_once("controlador/ciudad_Control.php");
             require_once("vista/queja_Vista.php");
         }
     }

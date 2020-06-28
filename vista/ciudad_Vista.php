@@ -15,11 +15,12 @@
                 <div class="row">
 					<label class="col-sm-3 control-label">Departamento</label>
 					<div class="col-sm-4">
-					    <select name="usuario" class="form-control" >
+					    <select name="departamento">
 						<?php
-                            $arr=$usuario->listar($con->conectar());
+                             $ciudad_Control = new ciudad_Control;
+							 $arr = $ciudad_Control->listardepartamento();  
 							for($i=0;$i<count($arr);$i++){
-							echo '<option value='.$arr[$i]['idusuario'].'>'.$arr[$i]['nombreusuario'].'</option>';
+							echo '<option value='.$arr[$i]['id_departamento'].'>'.$arr[$i]['nombre_departamento'].'</option>';
 							}
 							//session_destroy();
 						?>
